@@ -1,4 +1,3 @@
-﻿
 body {
   font-family: Arial, sans-serif;
   background-color: #141414;
@@ -29,16 +28,17 @@ p { font-size: 1.2em; }
   text-align: center;
   text-decoration: none;
   color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .film img {
   width: 100%;
   border-radius: 10px;
-  transition: 0.3s;
 }
 
-.film img:hover {
+.film:hover {
   transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
 }
 
 .film-details {
