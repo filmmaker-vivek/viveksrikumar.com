@@ -4,7 +4,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* Header Image */
+.header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: fill;
+  z-index: -1; /* Ensures the image stays in the background */
+  opacity: 0.8; /* Adjust transparency (1 for fully opaque, 0 for fully transparent) */
+}
+p {
+  line-height: .6; /* Adjusts line height to reduce space between lines */
+}
+p1 {
+  line-height: 2.6; /* Adjusts line height to reduce space between lines */
+}
 /* Font Imports */
 @font-face {
   font-family: 'TT Chocolates DemiBold';
@@ -22,17 +39,22 @@
 
 /* Apply Fonts */
 body {
+  background-image: url('assets/images/BG_IMAGE3.jpg');
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center center; /* Centers the background image */
+  background-attachment: fixed; /* Keeps the image fixed while scrolling */
   font-family: 'TT Chocolates Medium';
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  background-attachment: fixed;
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 60px 20px; /* Increased padding */
-  background-color: #333;
+  padding: 100px 20px; /* Increased padding */
+  background-color: transparent;
   color: white;
   position: relative;
 }
@@ -60,10 +82,10 @@ header p {
 header img {
   width: 15%;
   height: auto;
-  margin: 30px auto;
   display: block;
+  margin-left: auto;  /* Automatically pushes the image to the right */
+  margin-right: auto;    /* Ensures no extra space on the right */
 }
-
 /* Social Media Icons */
 header .social-links {
   position: absolute;
@@ -140,6 +162,11 @@ header .social-links a:hover img {
   display: none;
 }
 
+/* Hides the video background, Unhide if needed */
+.video-background {
+  display: none; /* Hides the video background */
+}
+
 @media (max-width: 768px) {
   .video-background video {
     display: none;
@@ -195,6 +222,35 @@ header .social-links a:hover img {
   letter-spacing: 1px;
 }
 
+/* Links Section */
+.links {
+  position: absolute;
+  bottom: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6); /* Adds contrast over video */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.links a.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.links a.btn:hover {
+  background-color: #555;
+}
+
 /* Footer */
 footer {
   background-color: #333;
@@ -226,6 +282,15 @@ footer p {
   font-size: 1em;
 }
 
+footer a {
+  color: white;  /* Link color */
+  text-decoration: none;  /* Remove underline */
+}
+
+footer a:hover {
+  color: #f39c12;  /* Hover color */
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
   header h1 {
@@ -236,10 +301,6 @@ footer p {
     font-size: 1.6em;
   }
 
-  header img {
-    width: 20%;
-  }
-
   .category h3 {
     font-size: 2em;
   }
@@ -248,6 +309,51 @@ footer p {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
+.category {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.directed-title {
+  font-size: 3.2em;
+  margin-top: 0;
+  color: white;
+}
+
+/* Style for the Watch Full Film section */
+.watch-full-film-heading {
+  font-size: 2.5em; /* Increase font size */
+  color: #fff; /* White text */
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif; /* Elegant font */
+}
+
+/* Style for the Watch on YouTube button */
+.watch-full-film-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  background-color: #958584; /* Eye-catching color */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px; /* Rounded corners */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.watch-full-film-btn:hover {
+  background-color: #ff3d30; /* Slightly darker color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Add some space above the section for breathing room */
+.watch-full-film-btn {
+  margin-top: 20px;
+}
+
 
 @media screen and (max-width: 480px) {
   header h1 {
@@ -269,4 +375,6 @@ footer p {
   .film-grid {
     grid-template-columns: 1fr;
   }
+
+
 }
