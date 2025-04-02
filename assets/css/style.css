@@ -5,127 +5,86 @@
   box-sizing: border-box;
 }
 
-/* Body and Page Layout */
+/* Font Imports */
+@font-face {
+  font-family: 'TT Chocolates DemiBold';
+  src: url('../fonts/TTChocolates-DemiBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Chocolates Medium';
+  src: url('../fonts/TTChocolates-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply Fonts */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'TT Chocolates Medium';
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
-  padding: 0;
-  margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
+/* Header */
 header {
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px; /* Increased padding */
   background-color: #333;
   color: white;
   position: relative;
 }
 
+header h1, header h2, header p:first-of-type {
+  font-family: 'TT Chocolates DemiBold';
+  text-transform: uppercase;
+}
+
 header h1 {
-  font-size: 3em;
-  font-weight: bold;
+  font-size: 3.2em; /* Slightly bigger */
+  margin-bottom: 15px;
 }
 
 header h2 {
-  font-size: 1.8em;
-  margin-bottom: 5px;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 header p {
   font-size: 1.2em;
-  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 header img {
   width: 15%;
   height: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 30px auto;
+  display: block;
 }
 
+/* Social Media Icons */
 header .social-links {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 15px;
+  right: 25px;
   display: flex;
   gap: 15px;
 }
 
 header .social-links a img {
   width: 30px;
-  height: auto;
   opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 header .social-links a:hover img {
   opacity: 1;
   transform: scale(1.1);
-  transition: all 0.3s ease;
 }
 
-section {
-  padding: 50px 20px;
-}
-
-.category h3 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.category h4 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.film-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  margin-top: 20px;
-}
-
-.film {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.film img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.film:hover {
-  transform: scale(1.05);
-}
-
-.film h3 {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  font-size: 1.5em;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Video Background Styles */
+/* Video Background */
 .video-background {
   position: relative;
   width: 100%;
@@ -149,11 +108,13 @@ section {
 }
 
 .video-background .content h1 {
-  font-size: 4em;
-  font-weight: bold;
+  font-family: 'TT Chocolates DemiBold';
+  font-size: 4.5em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .video-background .content h2 {
+  font-family: 'TT Chocolates Medium';
   font-size: 2.5em;
   margin-top: 10px;
 }
@@ -161,19 +122,77 @@ section {
 .video-background .content a {
   display: inline-block;
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #f39c12;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-transform: uppercase;
-  letter-spacing: 1px;
   border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .video-background .content a:hover {
   background-color: #e67e22;
+}
+
+/* Video Fallback */
+.no-video {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .video-background video {
+    display: none;
+  }
+  
+  .no-video {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: url("../images/SHOWREEL_IMAGE.jpg") center/cover no-repeat;
+  }
+}
+
+/* Film Grid */
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.film {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.film img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.film:hover {
+  transform: scale(1.05);
+}
+
+.film h3 {
+  font-family: 'TT Chocolates DemiBold';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  font-size: 1.5em;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Footer */
@@ -193,22 +212,21 @@ footer .social-links {
 
 footer .social-links a img {
   width: 40px;
-  height: auto;
   opacity: 0.8;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 footer .social-links a:hover img {
-  opacity: 1;
   transform: scale(1.2);
 }
 
 footer p {
-  margin-top: 20px;
+  font-family: 'TT Chocolates Medium';
+  margin-top: 15px;
   font-size: 1em;
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
   header h1 {
     font-size: 2.5em;
@@ -222,7 +240,7 @@ footer p {
     width: 20%;
   }
 
-  .category h3, .category h4 {
+  .category h3 {
     font-size: 2em;
   }
 
@@ -244,7 +262,7 @@ footer p {
     font-size: 1em;
   }
 
-  .category h3, .category h4 {
+  .category h3 {
     font-size: 1.8em;
   }
 
