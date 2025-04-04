@@ -282,13 +282,14 @@ header .social-links a:hover img {
   background-color: #555;
 }
 
-/* Footer */
 footer {
   width: 100%;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent for better readability */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0) 100%);
   color: white;
   text-align: center;
+  position: relative;
+  margin-top: auto; /* Ensures it stays at the bottom */
 }
 
 footer .social-links {
@@ -386,6 +387,38 @@ footer a:hover {
   margin-top: 20px;
 }
 
+/* Contact Info Section Styling */
+.contact-info {
+  font-family: 'TT Chocolates Medium';
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgba(34, 34, 34, 0.4); /* Dark background for contrast */
+  color: #fff; /* White text */
+  flex-grow: 1; /* To make sure the section takes available space */
+}
+
+.contact-info h3 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #efefef; /* Golden color for title */
+}
+
+.contact-info p {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  margin: 10px 0;
+  color: #c0c0c0;
+}
+
+.contact-info a {
+  color: #f2f2f2; /* Golden link color */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #ffffff; /* Slightly darker golden for hover effect */
+  text-decoration: underline;
+}
 
 @media screen and (max-width: 480px) {
   header h1 {
