@@ -75,6 +75,9 @@ header {
   text-align: center;
   padding: 100px 20px; /* Increased padding */
   background-color: transparent;
+  max-width: 90%;
+  margin: 0 auto;
+  word-wrap: break-word;
   color: white;
   position: relative;
 }
@@ -96,7 +99,9 @@ header h2 {
 
 header p {
   font-size: 1.2em;
+  line-height: 1.5em;
   margin-bottom: 20px;
+  margin: 10px 0;
 }
 
 header img {
@@ -247,15 +252,18 @@ header .social-links a:hover img {
   position: relative; /* Prevents abrupt movement */
   display: flex;
   justify-content: center;
-  gap: 10px; /* Adjust spacing */
-  margin-top: 100px; /* Ensure proper spacing */
+ /* gap: 10px; /* Adjust spacing */
+  margin-top: 20px; /* Ensure proper spacing */
   transition: all 0.3s ease-in-out; /* Smooth movement */
   background: rgba(0, 0, 0, 0.4); /* More transparency */
   padding: 10px 15px; /* More padding on top/bottom, less on sides */
   border-radius: 10px;
-  max-width: 70%; /* Makes the black layer shorter from left & right */
-  margin-left: auto; /* Centers it */
-  margin-right: auto; /* Centers it */
+  /*max-width: 70%; /* Makes the black layer shorter from left & right */
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* So buttons stack/wrap nicely on smaller screens */
 }
 
 .links a.btn {
