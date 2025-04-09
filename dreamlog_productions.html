@@ -21,23 +21,116 @@
       object-fit: cover; /* Ensures the image covers the entire area */
       z-index: -1; /* Makes sure the image stays in the background */
     }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    
+    .film-poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.film-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.film:hover .hover-text {
+  opacity: 1;
+}
+
+.film:hover img {
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
   <header>
     <h1 style="margin-bottom: 20px;">Dreamlog Productions</h1>
+    <a href="index.html">⬅ Back to Home</a>
   </header>
   <section class="category">
     <h3 class="directed-title">Produced by Dreamlog</h3>
     <div class="film-grid">
-      <a href="film_pages/film_gray.html" class="film"><img src="assets/images/GRAY2.jpeg" alt="GRAY"><h3>Gray (2023)</h3></a>
-      <a href="film_pages/film_lastdrop.html" class="film"><img src="assets/images/LASTDROP.JPEG" alt="The Last Drop"><h3>The Last Drop (2024)</h3></a>
-      <a href="film_pages/film_cinemance.html" class="film"><img src="assets/images/CINEMANCE2.jpg" alt="Cinemance"><h3>Cinemance (2024)</h3></a>
-      <a href="film_pages/film_crossroad.html" class="film"><img src="assets/images/CROSSROAD2.JPEG" alt="Crossroad"><h3>Crossroad (2025)</h3></a>
-      <a href="film_pages/irish.html" class="film"><img src="assets/images/IRISH2.JPEG" alt="Irish"><h3>Irish (2025)</h3></a>
-      <a href="film_pages/film_legacy.html" class="film"><img src="assets/images/LEGACY2.JPEG" alt="The Legacy Of Whispers"><h3>The Legacy Of Whispers (2025)</h3></a>
-      <a href="film_pages/film_irishbaba.html" class="film"><img src="assets/images/IRISHBABA2.JPEG" alt="Irish Baba"><h3>Irish Baba (2025)</h3></a>
-    </div>
+      <a href="film_pages/film_gray.html" class="film">
+        <div class="film-poster">
+          <img src="assets/images/GRAY2.jpeg" alt="GRAY">
+          <div class="hover-text">Watch Now</div>
+        </div>
+        <h3>Gray (2023)</h3>
+      </a>
+    
+      <a href="film_pages/film_lastdrop.html" class="film">
+        <div class="film-poster">
+          <img src="assets/images/LASTDROP.JPEG" alt="The Last Drop">
+          <div class="hover-text">Know More</div>
+        </div>
+        <h3>The Last Drop (2024)</h3>
+      </a>
+    
+      <a href="film_pages/film_cinemance.html" class="film">
+        <div class="film-poster">
+          <img src="assets/images/CINEMANCE2.jpg" alt="Cinemance">
+          <div class="hover-text">Watch Now</div>
+        </div>
+        <h3>Cinemance (2024)</h3>
+      </a>
+    
+      <a href="film_pages/film_crossroad.html" class="film">
+        <div class="film-poster">
+          <img src="assets/images/CROSSROAD2.JPEG" alt="Crossroad">
+          <div class="hover-text">Know More</div>
+        </div>
+        <h3>Crossroad (2025)</h3>
+      </a>
+    
+      <a href="film_pages/film_legacy.html" class="film">
+        <div class="film-poster">
+          <img src="assets/images/LEGACY2.JPEG" alt="The Legacy Of Whispers">
+          <div class="hover-text">Know More</div>
+        </div>
+        <h3>The Legacy Of Whispers (2025)</h3>
+      </a>
+    
+      <a href="film_pages/film_irish.html" class="film">
+        <div class="film-poster">
+          <img src="assets/images/IRISH2.JPEG" alt="Irish">
+          <div class="hover-text">Know More</div>
+        </div>
+        <h3>Irish (2025)</h3>
+      </a>
+    
+      <a href="film_pages/film_irishbaba.html" class="film">
+        <div class="film-poster">
+          <img src="assets/images/IRISHBABA2.JPEG" alt="Irish Baba">
+          <div class="hover-text">Know More</div>
+        </div>
+        <h3>Irish Baba (2025)</h3>
+      </a>
+    </div>  
   </section>
 
   <footer>
