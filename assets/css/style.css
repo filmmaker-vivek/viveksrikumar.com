@@ -266,20 +266,46 @@ header .social-links a:hover img {
   flex-wrap: wrap; /* So buttons stack/wrap nicely on smaller screens */
 }
 
-.links a.btn {
+
+/* Base styling for buttons */
+.links .btn {
+  position: relative;
   display: inline-block;
-  padding: 12px 20px;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
   margin: 10px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.links a.btn:hover {
-  background-color: #555;
+/* Hover scale effect */
+.links .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Overlay text on hover using pseudo-element */
+.links .btn::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Show overlay on hover */
+.links .btn:hover::after {
+  opacity: 1;
 }
 
 footer {
@@ -440,6 +466,41 @@ footer a:hover {
   .film-grid {
     grid-template-columns: 1fr;
   }
+
+  .film-poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.film-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.film:hover .hover-text {
+  opacity: 1;
+}
+
+.film:hover img {
+  transform: scale(1.05);
+}
 
 
 }
