@@ -27,52 +27,66 @@
       text-decoration: none;
       font-size: 1.2em;
       margin-top: 10px;
+      margin-bottom: 40px; 
       display: inline-block;
     }
 
-    
     .film-poster {
-  position: relative;
-  overflow: hidden;
-}
+      position: relative;
+      overflow: hidden;
+    }
 
-.film-poster img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
+    .film-poster img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
 
-.hover-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 1.5em;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
+    .hover-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.5em;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
 
-.film:hover .hover-text {
-  opacity: 1;
-}
+    .film:hover .hover-text {
+      opacity: 1;
+    }
 
-.film:hover img {
-  transform: scale(1.05);
-}
+    .film:hover img {
+      transform: scale(1.05);
+    }
+
+/* Style the description text */
+header p {
+      font-weight: normal;
+      font-size: 1.3em;
+      margin-top: 20px;
+      word-wrap: break-word;
+      color: white;
+      line-height: 1.6;
+    }
+
   </style>
 </head>
 <body>
   <header>
     <h1 style="margin-bottom: 20px;">Dreamlog Productions</h1>
     <a href="index.html">⬅ Back to Home</a>
-  </header>
-  <section class="category">
+    <p></p>
+    <p><strong>Dreamlog Productions</strong> is a film production house founded by Vivek. </p>
+     <p>Dedicated to creating compelling and thought-provoking films, Dreamlog Productions also collaborates with talented filmmakers, providing a platform to bring diverse stories to life.</p>
+     </header>
+     <section class="category">
     <h3 class="directed-title">Produced by Dreamlog</h3>
     <div class="film-grid">
       <a href="film_pages/film_gray.html" class="film">
