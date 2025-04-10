@@ -247,6 +247,13 @@ header .social-links a:hover img {
   letter-spacing: 1px;
 }
 
+.know-more-text {
+  display: flex;
+  justify-content: center; /* Horizontally centers the text */
+  align-items: center; /* Vertically centers the text */
+  text-align: center; /* Ensures the text itself is centered */
+  width: 70%; /* Ensure the container spans the full width */
+}
 
 .links {
   position: relative; /* Prevents abrupt movement */
