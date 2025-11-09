@@ -70,6 +70,12 @@ body::before {
   z-index: -1; /* Places it behind all content */
 }
 
+/* Override background for index page only */
+body.index-page::before {
+  background: url('../images/VIVEK-SRIKUMAR.JPG') center/cover no-repeat;
+  opacity: 0.7; /* you can adjust */
+}
+
 /* Header */
 header {
   text-align: center;
