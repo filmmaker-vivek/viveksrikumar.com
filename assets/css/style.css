@@ -73,7 +73,7 @@ body::before {
 /* Override background for index page only */
 body.index-page::before {
   background: url('../images/VIVEK-SRIKUMAR.JPG') center/cover no-repeat;
-  opacity: 0.7; /* you can adjust */
+  opacity: 1; /* you can adjust */
 }
 
 /* Header */
