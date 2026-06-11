@@ -171,56 +171,104 @@
 }
 
 /* Support & Connect Section */
+.support-card{
 
-.support-section {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 50px 30px;
-    text-align: center;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
+margin-top:35px;
+
+padding:28px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:18px;
+
+backdrop-filter:blur(10px);
+
+transition:.3s;
+
 }
 
-.support-section h2 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+.support-card:hover{
+
+border-color:#c79a45;
+
+box-shadow:0 0 30px rgba(199,154,69,.15);
+
 }
 
-.support-section p {
-    max-width: 750px;
-    margin: 0 auto 30px;
-    font-size: 1.15em;
-    line-height: 1.8;
-    color: #dddddd;
+.support-card h3{
+
+margin-top:0;
+
+font-size:1.5em;
+
+margin-bottom:15px;
+
 }
 
-.support-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.support-card p{
+
+font-size:1em;
+
+line-height:1.7;
+
+color:#d8d8d8;
+
+margin-bottom:25px;
+
 }
 
-.support-buttons a {
-    display: inline-block;
-    padding: 14px 28px;
-    border: 1px solid rgba(255,255,255,0.35);
-    border-radius: 50px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all .3s ease;
-    background: rgba(255,255,255,0.04);
+.support-main-btn,
+
+.support-secondary-btn{
+
+display:block;
+
+text-align:center;
+
+padding:14px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+margin-bottom:15px;
+
+transition:.3s;
+
 }
 
-.support-buttons a:hover {
-    background: #ffffff;
-    color: #000000;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(255,255,255,0.18);
+.support-main-btn{
+
+background:#c79a45;
+
+color:#000;
+
+}
+
+.support-main-btn:hover{
+
+background:#fff;
+
+}
+
+.support-secondary-btn{
+
+border:1px solid rgba(255,255,255,.3);
+
+color:#fff;
+
+}
+
+.support-secondary-btn:hover{
+
+background:#fff;
+
+color:#000;
+
 }
 
   .imdb-link:hover {
@@ -256,6 +304,25 @@
       <p><strong>Year:</strong> 2026</p>
       <p><strong>Genre:</strong> Genre-Blend</p>
       <p>Sheee is a haunting Irish folklore drama that blurs the line between myth and reality. When Sean, a man searching for meaning, joins Kumar, a folklore enthusiast obsessed with local legends, their curiosity leads them deep into the woods- in search of Dubheasa, a woman once believed to be cursed and who disappeared centuries ago. What begins as a curious night of exploration turns into a journey across time- where love, guilt, and myth intertwine.</p>
+      <div class="support-card">
+
+    <h3>🤝 Support & Connect</h3>
+    <p>
+        Help us take <strong>Sheee</strong> to next stage...
+        Support and colloborate with us for media, festivals,
+        collaborations and production opportunities.
+    </p>
+    <a
+      href="https://www.gofundme.com/f/lets-finish-sheee-together-help-us-complete-our-short-film"
+      target="_blank"
+      class="support-main-btn">
+        ❤️ Support SHEEE
+    </a>
+    <a
+      href="mailto:dreamlogproductions@gmail.com?subject=SHEEE%20Enquiry"
+      class="support-secondary-btn">
+        ✉ Contact Dreamlog Productions
+    </a>
       <a href="https://www.imdb.com/title/tt37984111/" target="_blank" class="social-btn">
         🎬 IMDb
     </a>
@@ -268,32 +335,6 @@
   <section class="video-watch-section">
    
   </section>
-
-<section class="support-section">
-
-    <h2>Support & Connect</h2>
-
-    <p>
-        <strong>Sheee</strong> is an independent Irish short film driven by passion,
-        folklore and community. Whether you're a festival programmer, producer,
-        journalist, collaborator or film lover, we'd love to hear from you and
-        welcome your support as we complete the journey.
-    </p>
-
-    <div class="support-buttons">
-
-        <a href="https://www.gofundme.com/f/lets-finish-sheee-together-help-us-complete-our-short-film"
-           target="_blank">
-            ❤️ Support Sheee Here!
-        </a>
-
-        <a href="mailto:dreamlogproductions@gmail.com?subject=SHEEE%20Enquiry">
-            ✉ Contact Us, Let's Colloborate
-        </a>
-
-    </div>
-
-</section>
 
 
   <!-- Footer -->
