@@ -274,6 +274,35 @@ color:#000;
   .imdb-link:hover {
   text-decoration: underline;
   }
+
+    /* Sheee Trailer Section */
+.trailer-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto 70px;
+  text-align: center;
+}
+
+.trailer-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.trailer-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #000;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+.trailer-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
     @media (max-width: 768px) {
       .film-section {
         flex-direction: column;
@@ -335,6 +364,22 @@ color:#000;
   <section class="video-watch-section">
    
   </section>
+
+  <!-- Trailer Section -->
+<section class="trailer-section">
+  <h2>OFFICIAL TEASER</h2>
+
+  <div class="trailer-container">
+    <iframe
+      src="https://www.youtube.com/watch?v=3TlPUAwh6X0"
+      title="Sheee Official Teaser"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
   <!-- Photo Gallery Section -->
   <section class="photo-gallery">
