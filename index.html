@@ -1,67 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Vivek Srikumar | Filmmaker</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-<style>
-  html, body {
-    margin: 0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivek Srikumar | Filmmaker</title>
+
+<link rel="stylesheet" href="assets/css/style   margin: 0;
     padding: 0;
     height: 100%;
     color: white;
     overflow-x: hidden;
-  }
-</style>
-</head>
-<body class="index-page">
-  <header>
-    <h1>Vivek Srikumar</h1>
-    <h2 style="font-size: 1.8em; margin-bottom: 5px;">Filmmaker</h2>
-    <p style="font-size: 1.2em; margin-top: 0;">Writer | Editor | Producer | Director</p>
-    <p1> </p1>
-    <p style="margin-top: 50px;">______________ </p>
-    <p style="margin-top: 30px;"><strong>Vivek Srikumar</strong> is an award winning Ireland-based filmmaker and scriptwriter originally from India.</p>
-    <p>With a passion for storytelling, Vivek is known for his thought-provoking narratives and exploration of diverse genres.</p> 
-    <p>His works have captured attention for their depth and creativity. Discover his films and creative journey here.</p>
-    <p style="margin-top: 2px;">______________ </p>
-    <div class="links">
-      <div class="know-more-text">
-        <p>Click below to KNOW MORE...</p>
-      </div>
-      <hr style="border: .5px solid rgba(255, 255, 255, 0.0); width: 100%; margin-bottom: 10px;">
-      <a href="directions.html" class="btn">DIRECTIONS</a>
-      <a href="https://dreamlogproductions.com" class="btn">DREAMLOG PRODUCTIONS</a>
-      <a href="creative_space.html" class="btn">CREATIVE SPACE</a>
-      <a href="awards.html" class="btn">AWARDS AND NOMINATIONS</a>
-    </div>  
-<!-- Videos Section -->
-<section class="videos">
-      <p style="margin-top: 50px;margin-bottom: 10px;">
-  <h3>SHOWREEL TEASER</h3>
-  <div class="video-gallery">
-   <iframe width="720" height="480" src="https://www.youtube.com/embed/zAGv4hlsDPA?si=FpxHeuDK_r2oQtd_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-</section>
-    <img src="assets/images/LOGO--black3.png" alt="Dreamlog Productions Logo">
-  </header>
+}
 
-  <footer>
-    <div class="social-links">
-      <a href="https://www.instagram.com/vivek_srikumar/" target="_blank">
-        <img src="assets/images/instagram-logo.png" alt="Instagram" />
-      </a>
-      <a href="https://www.imdb.com/name/nm15313793/" target="_blank">
-        <img src="assets/images/imdb-logo.png" alt="IMDb" />
-      </a>
-      <a href="https://www.linkedin.com/in/filmmaker-vivek/" target="_blank">
-        <img src="assets/images/linkedin-logo.png" alt="LinkedIn" />
-      </a>
-      <a href="mailto:stiurthoirvivek@gmail.com" target="_blank">
-        <img src="assets/images/email-logo.png" alt="Email" />
-      </a>
+/* Safe enhancements only */
+
+.content-panel {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+.bio {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.separator {
+    width: 80px;
+    height: 2px;
+    background: #d4af37;
+    margin: 25px auto;
+}
+
+.links {
+    margin-top: 30px;
+}
+
+.links .btn {
+    margin: 8px;
+}
+
+.showreel-section {
+    margin-top: 60px;
+}
+
+.showreel-section h3 {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.video-gallery iframe {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo-container img {
+    max-width: 180px;
+    opacity: 0.9;
+}
+
+.highlights {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.highlight-item {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+
+    .content-panel {
+        padding: 25px;
+        margin: 15px;
+    }
+
+    .video-gallery iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .highlight-item {
+        width: 100%;
+    }
+}
+
+</style>
+
+</head>
+
+<body class="index-page">
+
+<header>
+
+<div class="content-panel">
+
+    <h1>Vivek Srikumar</h1>
+
+    <h2 style="font-size:1.8em; margin-bottom:5px;">
+        Filmmaker
+    </h2>
+
+    <p class="tagline">
+        Writer • Editor • Producer • Director
+    </p>
+
+    <div class="separator"></div>
+
+    <div class="highlights">
+        <div class="highlight-item">🎬 25+ Festival Selections</div>
+        <div class="highlight-item">🏆 International Award Winner</div>
+        <div class="highlight-item">🎓 Galway Film Fleadh NTA Selection</div>
     </div>
-    <p>© 2025 Vivek Srikumar | <a href="contact.html">Contact</a></p>
-  </footer>
+
+    <div class="bio">
+
+        <p>
+            <strong>Vivek Srikumar</strong> is an award-winning Ireland-based
+            filmmaker and scriptwriter originally from India.
+        </p>
+
+        <p>
+            With a passion for storytelling, Vivek is known for creating
+            thought-provoking narratives that explore identity, suspense,
+            relationships, comedy, and the human condition across diverse
+            genres.
+        </p>
+
+        <p>
+            His films have received international recognition through awards,
+            nominations, and festival selections, while continuing to connect
+            with audiences through emotionally resonant and visually engaging
+            storytelling.
+        </p>
+
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="links">
+
+        <div class="know-more-text">
+            <p><strong>Explore More</strong></p>
+        </div>
+
+        <a href="directions.html" class="btn">
+            DIRECTIONS
+        </a>
+
+        <a href="https://dreamlogproductions.com" class="btn">
+            DREAMLOG PRODUCTIONS
+        </a>
+ 
+      <a href="creative_space.html" class="btn">
+            CREATIVE SPACE
+        </a>
+
+        <a href="awards.html" class="btn">
+            AWARDS & NOMINATIONS
+        </a>
+
+    </div>
+
+    <section class="showreel-section">
+
+        <h3>SHOWREEL TEASER</h3>
+
+        <div class="video-gallery">
+
+            <iframe
+                src="https://www.youtube.com/embed/zAGv4hlsDPA?si=FpxHeuDK_r2oQtd_"
+                title="Showreel Teaser"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <div class="logo-container">
+            <img src="assets/images/LOGO--black3.png" alt="Dreamlog Productions Logo">
+</div>
+
+</header>
+
+<footer>
+
+<div class="social-links">
+
+<a href="https://www.instagram.com/vivek_srikumar/" target="_blank">
+    assets/images/instagram-logo.png
+</a>
+
+<a href="https://www.imdb.com/name/nm15313793/" target="_blank">
+    assets/images/imdb-logo.png
+</a>
+
+<a href="https://www.linkedin.com/in/filmmaker-vivek/" target="_blank">
+    assets/images/linkedin-logo.png
+</a>
+
+<a href="mailto:stiurthoirvivek@gmail.com" target="_blank">
+    <img src=ages/email-logo.png
+</a>
+
+</div>
+
+<p>
+© 2026 Vivek Srikumar |
+<a href="contact.html">Contact</a>
+</p>
+
+</footer>
+
 </body>
 </html>
